@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-// const db = require("./Develop/db/connect");
+const db = require("./config/connect");
 
 const startMenu = {
   name: "functionality",
@@ -155,6 +155,7 @@ const addRole = () => {
 };
 
 function start() {
+  console.log("i got called!!!")
   inquirer.prompt(startMenu).then((response) => {
     console.log(response);
     //based on user choice, we're going to maybe ask additional questions or do some db operation
@@ -182,5 +183,12 @@ function start() {
     }
   });
 }
+db.connect((err)=>{
+ if(err){
+   console.log(err) 
+   process.exit()
+  }else{
+    start();
+  }
+})
 
-start();
