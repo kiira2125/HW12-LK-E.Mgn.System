@@ -145,15 +145,11 @@ async function userChoice() {
 function init() {
     // Menu Grpahic
     console.log('**************************************************************')
-    console.log('*                                                            *')
-    console.log('*                                                            *')
     console.log('*                    The Employee Menu                       *')
     console.log('*                                by LK                       *')                       
-    console.log('*                                                            *')
-    console.log('*                                                            *')
     console.log('**************************************************************')
 
-    // Call function
+    // Call the userChoice function
     userChoice();
 }
 init();

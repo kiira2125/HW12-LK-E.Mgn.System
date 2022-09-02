@@ -11,6 +11,7 @@
   "dependencies": {
     "inquire": "^0.4.8",
     "inquirer": "^8.2.4",
+    "mongoose": "^6.5.4",
     "mysql2": "^2.3.3"
   }
 }

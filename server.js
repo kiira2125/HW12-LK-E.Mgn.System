@@ -89,12 +89,29 @@ function start() {
   inquirer.prompt(startMenu).then((response) => {
     console.log(response);
     //based on user choice, we're going to maybe ask additional questions or do some db operation
-    // switch (response.functionality) {
-    //   case "Show All Employees":
-    //     return showAllEmployees();
-    //   case "Add Employee":
-    //     return addEmployee();
-    // }
+    switch (response.functionality) {
+      case "Show All Employees":
+        return showAllEmployees();
+
+      case "Add Employee":
+        return addEmployee();
+
+      case "Update Employee Role":
+        return updateEmployeeRole();
+
+      case "View All Departments":
+        return viewAllDepartments();
+
+      case "Add Department" :
+        return addDepartment();
+
+      case "View All Roles":
+        return viewAllRoles();
+      
+      case "Add Role":
+        return addRole();
+ 
+    }
   });
 }
 
